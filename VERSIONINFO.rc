@@ -1,11 +1,12 @@
 #ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
-#endif /* Prevents winsock.h from being included in windows.h */
-#include <windows.h> /* Needed for a few definitions, can be excluded if you use values instead. */
+#endif
+#include <windows.h>
+#include "version.h"
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION    	1,0,0,0
-PRODUCTVERSION 	12,02,0,0
+FILEVERSION    	RC_FILEVERSION
+PRODUCTVERSION 	RC_PRODUCTVERSION
 FILEOS         	VOS_NT_WINDOWS32
 FILETYPE       	VFT_DLL
 BEGIN
@@ -13,24 +14,17 @@ BEGIN
     BEGIN
         BLOCK "040904E4"
         BEGIN
-            VALUE "CompanyName",      "NUMENGO\0"
-            VALUE "FileDescription",  "library for unit handling\0"
-            VALUE "FileVersion",      "1.0rev0\0"
-            VALUE "ProductName",      "numenGo|ToolBox\0"
-            VALUE "ProductVersion",   "12.02rev0\0"
-            VALUE "LegalCopyright",   "Copyright © 2012 Numengo\0"
+            VALUE "CompanyName",      RC_COMPANYNAME
+            VALUE "FileDescription",  RC_DESCRIPTION_STRING
+            VALUE "FileVersion",      RC_FILEVERSION_STRING
+            VALUE "ProductName",      RC_PRODUCTNAME_STRING
+            VALUE "ProductVersion",   RC_PRODUCTVERSION_STRING
+            VALUE "LegalCopyright",   RC_COPYRIGHT_STRING
         END
     END
 
     BLOCK "VarFileInfo"
     BEGIN
-        /* The following line should only be modified for localized versions.     */
-        /* It consists of any number of WORD,WORD pairs, with each pair           */
-        /* describing a language,codepage combination supported by the file.      */
-        /*                                                                        */
-        /* For example, a file might have values "0x409,1252" indicating that it  */
-        /* supports English language (0x409) in the Windows ANSI codepage (1252). */
-
         VALUE "Translation", 0x409, 1252
 
     END

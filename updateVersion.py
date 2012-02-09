@@ -1,3 +1,3 @@
 import sys
 import libVersion
-libVersion.incrementVersionFileAndRC(sys.path[0])
+libVersion.incrementVersionFileAndVersionDotH(sys.path[0])
