@@ -202,7 +202,7 @@ NgoUnit::NgoUnit()
       {
          xmlInitParser();
          std::string path;
-	     NgoFileHandler::get()->loadPaths("$NUMENGO\\data\\pathlist.xml");
+	     NgoFileHandler::get()->loadPaths();
          std::string file  = "dimensions_unit.xml";
          xmlDoc* doc = 0L;
          if (NgoFileHandler::get()->isInPath(file.c_str()))
