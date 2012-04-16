@@ -254,7 +254,7 @@ NgoUnit::NgoUnit()
    catch (NgoError & er)
    {
       er.addScopeError("NgoUnit::NgoUnit");
-      throw er;
+      er.raise();
    }
    catch (...)
    {
