@@ -164,7 +164,7 @@ std::string NgoUnit::reduce(const char * i_str_expr)
          msg = u_msg;
       units_clear_exception();
       std::ostringstream oss;
-      oss << "Problem reducing unit : " << i_str_expr << "\n" << msg << "\n";
+      oss << "Problem reducing unit : " << i_str_expr << std::endl << msg;
       throw NgoError(oss.str(),"NgoUnit::NgoUnit","numenGo");
       return  i_str_expr;
    }
@@ -213,9 +213,8 @@ NgoUnit::NgoUnit()
          else
          {
             std::ostringstream oss;
-            oss << "Impossible to find " << file << " in path list.";
-            std::string msg = oss.str();
-            throw NgoError(msg,"NgoUnit::NgoUnit","numenGo");
+            oss << "Impossible to find " << file << " in path list. Unit manager can't be initialized.";
+            throw NgoErrorData(oss.str());
 
          }
 
