@@ -5,7 +5,7 @@ premake = os.path.join(toolsdir,'premake')
 premake = os.path.join(premake,'premake4')
 if 'win' in sys.platform:
    premake = premake + '.exe' 
-   target = 'vs2008'
+   target = 'vs2010'
 else:
    target = 'codeblocks'
 cmd = '%s %s'%(premake,target)
