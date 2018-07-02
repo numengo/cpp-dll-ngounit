@@ -34,13 +34,13 @@
 /*******************************************************************************
    DEFINES / TYPDEFS / ENUMS
 *******************************************************************************/
-#ifdef NGO_UNIT_USE_DYN
+#ifdef NGOUNIT_USE_DYN
    #ifdef  _MSC_VER
-   	#ifndef NGO_UNIT_EXPORT
-   		#ifdef NGO_UNIT_MAKE_DLL
-   			#define NGO_UNIT_EXPORT __declspec( dllexport )
+   	#ifndef NGOUNIT_EXPORT
+   		#ifdef NGOUNIT_MAKE_DLL
+   			#define NGOUNIT_EXPORT __declspec( dllexport )
    		#else
-   			#define NGO_UNIT_EXPORT __declspec( dllimport )
+   			#define NGOUNIT_EXPORT __declspec( dllimport )
    		#endif
    	#endif
    	#pragma warning( disable: 4251 )
@@ -48,16 +48,16 @@
    	#pragma warning( disable: 4996 )
    	#pragma warning( disable: 4661 )
    #else
-   	#ifndef NGO_UNIT_EXPORT
-   		#ifdef NGO_UNIT_MAKE_DLL
-   			#define NGO_UNIT_EXPORT
+   	#ifndef NGOUNIT_EXPORT
+   		#ifdef NGOUNIT_MAKE_DLL
+   			#define NGOUNIT_EXPORT
    		#else
-   			#define NGO_UNIT_EXPORT
+   			#define NGOUNIT_EXPORT
    		#endif
    	#endif
    #endif
 #else
-	#define NGO_UNIT_EXPORT
+	#define NGOUNIT_EXPORT
 #endif
 
 

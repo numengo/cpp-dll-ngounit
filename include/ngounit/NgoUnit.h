@@ -48,7 +48,7 @@
  @param o_off conversion offset
  @ingroup GroupNgoFlCommon
 */
-NGO_UNIT_EXPORT int NgoGetUnitConversion(const char * iunit, const char * ounit, double *o_fact, double *o_off);
+NGOUNIT_EXPORT int NgoGetUnitConversion(const char * iunit, const char * ounit, double *o_fact, double *o_off);
 
 
 
@@ -70,7 +70,7 @@ typedef struct Dimension
 
 /*! @brief Class for unit conversion */
 /*! @class Units */
-class NGO_UNIT_EXPORT NgoUnit : public NgoSingleton<NgoUnit>
+class NGOUNIT_EXPORT NgoUnit : public NgoSingleton<NgoUnit>
 {
    friend class NgoSingleton<NgoUnit>;
 public:
@@ -188,10 +188,5 @@ protected:
    /*! @brief Destructor */
    ~NgoUnit();
 };
-
-/*! Computes the maximum of \a a and \a b */
-#ifndef max
-#define max(a, b)       ((a) < (b) ? (b) : (a))
-#endif
 
 #endif
