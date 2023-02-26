@@ -190,8 +190,8 @@ protected:
 };
 
 /*! Computes the maximum of \a a and \a b */
-#ifndef max
-#define max(a, b)       ((a) < (b) ? (b) : (a))
+#ifndef MAX
+#define MAX(a, b)       ((a) < (b) ? (b) : (a))
 #endif
 
 #endif

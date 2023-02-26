@@ -45,7 +45,7 @@
 #include "ngounit/NgoUnit.h"
 #include "units.h"
 #include "ngocommon/NgoFileHandler.h"
-#include "ngocommon/ngocommon.h"
+#include "ngocommon/NgoCommon.h"
 
 using std::string;
 using namespace boost;
@@ -377,7 +377,7 @@ std::vector<string> den_exp
             if ((*num1)[i]==(*num1)[j])
             {
                // add exponents of a same unit found in numerator
-               int res_exp = max(atoi((*num1_exp)[i].c_str()),1) + max(1,atoi((*num1_exp)[j].c_str()));
+               int res_exp = MAX(atoi((*num1_exp)[i].c_str()),1) + MAX(1,atoi((*num1_exp)[j].c_str()));
                std::ostringstream out;
                out << res_exp;
                string str_res_exp = out.str();
@@ -414,7 +414,7 @@ std::vector<string> den_exp
          {
             if ((*num1)[i]==(*den1)[j])
             {
-               int res_exp = max(atoi((*num1_exp)[i].c_str()),1) - max(atoi((*den1_exp)[j].c_str()),1);
+               int res_exp = MAX(atoi((*num1_exp)[i].c_str()),1) - MAX(atoi((*den1_exp)[j].c_str()),1);
                std::ostringstream out;
                out << abs(res_exp);
                string str_res_exp = out.str();
