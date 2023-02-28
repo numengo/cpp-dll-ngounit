@@ -297,6 +297,7 @@ function PrefilterTestBuildOptions(_targetname)
     files {"test/**.cpp"}
     links {"UnitTest", "NgoErr"}
     includedirs {checkAndGetEnv("DIR_UNITTEST_ROOT").."/src"}
+    includedirs {"./test"}
     targetname(_targetname)
 end
 
